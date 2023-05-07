@@ -29,6 +29,7 @@
     tree-sitter
     entr
     mpv-unwrapped
+    neofetch
   ] ++ (lib.optionals pkgs.stdenv.isDarwin [
     qemu
     lima
