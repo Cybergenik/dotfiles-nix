@@ -1,11 +1,11 @@
 { inputs, ... }@flakeContext:
 let
   homeModule = { config, lib, pkgs, ... }: {
-    imports = [
-      inputs.self.homeModules.activation
-      inputs.self.homeModules.default
-      inputs.self.homeModules.package-darwin
-      inputs.self.homeModules.package-minimum
+    imports = with inputs.self.home.modules; [
+      default
+      activation
+      package-darwin
+      package-minimum
     ];
     config = {
       home = {
@@ -14,7 +14,7 @@ let
     };
   };
   nixosModule = { ... }: {
-    home-manager.users.StepBroBD = homeModule;
+    home-manager.users.luciano = homeModule;
   };
 in
 (
