@@ -5,7 +5,7 @@ let
       home-manager.darwinModules.home-manager
       self.darwin.modules.default
       self.darwin.modules.overlay
-      self.home.luciano.modules
+      self.home.modules
       {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
