@@ -3,7 +3,7 @@ let
   homeModule = { config, lib, pkgs, ... }: {
     imports = with inputs.self.home.modules; [
       default
-      activation
+      #activation
       package-darwin
       package-minimum
     ];

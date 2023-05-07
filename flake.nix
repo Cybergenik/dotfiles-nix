@@ -39,7 +39,7 @@
         luciano = import ./home/luciano.nix flakeContext; 
         modules = {
             default = import ./home/modules/default.nix flakeContext;
-            activation = import ./home/modules/activation.nix flakeContext;
+            #activation = import ./home/modules/activation.nix flakeContext;
             package-darwin = import ./home/modules/package-darwin.nix flakeContext;
             package-linux = import ./home/modules/package-linux.nix flakeContext;
             package-minimum = import ./home/modules/package-minimum.nix flakeContext;
