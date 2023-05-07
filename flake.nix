@@ -36,7 +36,7 @@
         aarch64-darwin = import ./darwin/aarch64-darwin.nix context;
         x86_64-darwin = import ./darwin/x86_64-darwin.nix context;
       };
-      nixosConfiguration = { };
+      nixosConfigurations = { };
 
       # these two are unnecessary, find a way to fix (remove) them by directly importing them in their respective modules
       home.modules = {
