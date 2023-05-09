@@ -6,7 +6,7 @@
       #!nix-shell -i zsh -p curl git perl smimesign
       set -eo pipefail
       export PATH="$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin" && PATH="$(perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/, $ENV{PATH}))')"
-      #curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/stepbrobd/dotfiles/master/scripts/setup.sh | zsh
+      curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/Cybergenik/neovim_configs/master/scripts/setup.sh | zsh
       echo nandayou
     '';
   };
