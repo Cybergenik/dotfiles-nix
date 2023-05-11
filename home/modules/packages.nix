@@ -29,6 +29,7 @@
     entr
     mpv-unwrapped
     neofetch
+    discord
   ] ++ (lib.optionals pkgs.stdenv.isDarwin [
     qemu
     lima
