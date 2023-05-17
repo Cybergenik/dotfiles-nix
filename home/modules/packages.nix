@@ -30,6 +30,7 @@
     mpv-unwrapped
     neofetch
     discord
+    flyctl
     nodePackages_latest.gatsby-cli
     yarn
   ] ++ (lib.optionals pkgs.stdenv.isDarwin [
@@ -49,7 +50,6 @@
     qemu
     docker
     terraform
-    flyctl
     ffmpeg
     yt-dlp
     zathura
