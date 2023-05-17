@@ -30,6 +30,7 @@
     mpv-unwrapped
     neofetch
     discord
+    nodePackages_latest.gatsby-cli
   ] ++ (lib.optionals pkgs.stdenv.isDarwin [
     qemu
     lima
