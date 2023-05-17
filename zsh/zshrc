@@ -42,8 +42,6 @@ if [[ $(uname) == "Darwin" ]]; then
 fi
 
 # Z-Shell
-setopt vi
-setopt correct
 HISTFILE="$HOME/.zsh_history"
 HISTCONTROL=ignoreboth
 HISTSIZE=65536
