@@ -31,7 +31,7 @@
     neofetch
     discord
     nodePackages_latest.gatsby-cli
-    nodePackages_latest.pnpm
+    yarn
   ] ++ (lib.optionals pkgs.stdenv.isDarwin [
     qemu
     lima
