@@ -37,16 +37,5 @@
         x86_64-darwin = import ./darwin/x86_64-darwin.nix context;
       };
       nixosConfigurations = { };
-
-      # these two are unnecessary, find a way to fix (remove) them by directly importing them in their respective modules
-      home.modules = {
-        configurations = import ./home/modules/configurations.nix context;
-        packages = import ./home/modules/packages.nix context;
-        activation = import ./home/modules/activation.nix context;
-      };
-      darwin.modules = {
-        configurations = import ./darwin/modules/configurations.nix context;
-        overlays = import ./darwin/modules/overlays.nix context;
-      };
     };
 }
