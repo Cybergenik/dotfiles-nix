@@ -14,11 +14,11 @@ let
       configurations
       overlays
       home-manager.darwinModules.home-manager
-      self.homeConfigurations.StepBroBD.homeModule
+      self.homeConfigurations.luciano.homeModule
       {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
-        users.users.StepBroBD = {
+        users.users.luciano = {
           description = "Darwin only configs";
           name = "luciano";
           home = "/Users/luciano";
