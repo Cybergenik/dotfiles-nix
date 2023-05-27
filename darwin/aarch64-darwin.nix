@@ -4,17 +4,17 @@ let
     inherit inputs;
   };
 
-  configurations = import ./modules/configurations.nix context;
+  configurations = import ./modules/configurations.nix;
   overlays = import ./modules/overlays.nix context;
 
   darwinModule = { config, lib, pkgs, ... }: {
     config.system.stateVersion = 4;
 
-    imports = with inputs; [
+    imports = [
       configurations
       overlays
-      home-manager.darwinModules.home-manager
-      self.homeConfigurations.luciano.homeModule
+      inputs.home-manager.darwinModules.home-manager
+      inputs.self.homeConfigurations.luciano.homeModule
       {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
