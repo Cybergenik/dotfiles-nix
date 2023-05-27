@@ -1,15 +1,25 @@
 { inputs, ... }@context:
 let
-  homeModule = { config, lib, pkgs, ... }: {
+  configurations = { config, lib, pkgs, ... }: {
     config.home.stateVersion = "23.05";
-    imports = with inputs.self.home.modules; [
-      configurations
-      activation
-      packages
+
+    config.programs = {
+      home-manager = {
+        enable = true;
+      };
+      nix-index = {
+        enable = true;
+        enableZshIntegration = true;
+      };
+    };
+
+    imports = [
+      ./modules/packages.nix
+      ./modules/activation.nix
     ];
   };
-  nixosModule = { ... }: {
-    home-manager.users.luciano = homeModule;
+  homeModule = { ... }: {
+    home-manager.users.luciano = configurations;
   };
 in
 (
@@ -22,9 +32,9 @@ in
     (system:
       inputs.home-manager.lib.homeManagerConfiguration {
         modules = [
-          homeModule
+          configurations
         ];
         pkgs = inputs.nixpkgs.legacyPackages.${system};
       }
-    ) // { inherit nixosModule; }
+    ) // { inherit homeModule; }
 )

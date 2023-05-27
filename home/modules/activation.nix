@@ -1,4 +1,3 @@
-{ inputs, ... }@context:
 { config, lib, pkgs, ... }: {
   config.home.activation = {
     dotfiles = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
