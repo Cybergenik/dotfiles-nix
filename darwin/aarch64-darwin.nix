@@ -19,7 +19,7 @@ let
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
         users.users.luciano = {
-          description = "Darwin only configs";
+          description = "Luciano Remes";
           name = "luciano";
           home = "/Users/luciano";
         };
