@@ -72,6 +72,7 @@ if [[ $(command -v code-insiders) >/dev/null ]]; then
 fi
 
 # Exports
+export NIXPKGS_ALLOW_UNFREE=1
 export SHELL="zsh"
 export EDITOR="nvim"
 export VISUAL="nvim"
