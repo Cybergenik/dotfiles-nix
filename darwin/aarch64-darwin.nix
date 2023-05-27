@@ -4,7 +4,7 @@ let
     inherit inputs;
   };
 
-  configurations = import ./modules/configurations.nix;
+  configurations = import ./modules/configurations.nix context;
   overlays = import ./modules/overlays.nix context;
 
   darwinModule = { config, lib, pkgs, ... }: {
