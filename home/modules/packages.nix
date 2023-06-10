@@ -30,6 +30,7 @@
     neofetch
     discord
     flyctl
+    slack
     nodePackages_latest.gatsby-cli
     yarn
   ] ++ (lib.optionals pkgs.stdenv.isDarwin [
