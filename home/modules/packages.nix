@@ -33,6 +33,7 @@
     slack
     nodePackages_latest.gatsby-cli
     yarn
+    pkg-config
   ] ++ (lib.optionals pkgs.stdenv.isDarwin [
     qemu
     lima
