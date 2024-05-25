@@ -15,11 +15,6 @@
       url = "flake:home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    raycast-overlay = {
-      url = "flake:raycast-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = inputs:
