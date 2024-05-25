@@ -17,7 +17,7 @@
     };
 
     raycast-overlay = {
-      url = "github:stepbrobd/raycast-overlay";
+      url = "flake:raycast-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
