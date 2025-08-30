@@ -47,6 +47,7 @@
     iterm2
     raycast
     zoom-us
+    aerospace
   ]) ++ (lib.optionals pkgs.stdenv.isLinux [
     qemu
     docker
