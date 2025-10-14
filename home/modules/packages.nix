@@ -1,6 +1,8 @@
 { config, lib, pkgs, ... }: {
   config.home.packages = with pkgs; [
     (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+    zig
+    tree
     cacert
     nix
     cachix
