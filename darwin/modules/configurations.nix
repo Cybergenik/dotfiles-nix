@@ -1,6 +1,7 @@
 { config, lib, pkgs, ... }: {
   config = {
     nix = {
+      enable = true;
       extraOptions = ''
         experimental-features = ca-derivations flakes impure-derivations nix-command
         auto-optimise-store = true
@@ -36,15 +37,11 @@
     };
     security = {
       pam = {
-        enableSudoTouchIdAuth = true;
-      };
-    };
-    services = {
-      nix-daemon = {
-        enable = true;
+        services.sudo_local.touchIdAuth = true;
       };
     };
     system = {
+      primaryUser = "luciano";   
       defaults = {
         NSGlobalDomain = {
           AppleInterfaceStyle = "Dark";

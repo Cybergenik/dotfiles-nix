@@ -15,6 +15,7 @@ let
       overlays
       inputs.home-manager.darwinModules.home-manager
       inputs.self.homeConfigurations.luciano.homeModule
+
       {
         home-manager.useGlobalPkgs = true;
         home-manager.useUserPackages = true;
